@@ -1,8 +1,11 @@
 pipeline{
     agent any
     parameters{
-        choice(choices: ['dev', 'prd', 'ist'], description: 'What environment ?', name: 'envtarget')
-        string(defaultValue: "MyCompoenent", description: 'Component Name ?', name: 'component')
+        //choice(choices: ['dev', 'prd', 'ist'], description: 'What environment ?', name: 'envtarget')
+        string(defaultValue: "", description: 'App Name ?', name: 'appName')
+        string(defaultValue: "", description: 'Component Name ?', name: 'compName')
+        string(defaultValue: "", description: 'Component Version ?', name: 'compVersion')
+        string(defaultValue: "dev", description: 'Environment Name ?', name: 'envName')
     }
     stages{
         stage('check'){
@@ -21,7 +24,10 @@ pipeline{
                       procedureName : 'SimpleProceedureTest',
                       procedureParameters : """{"procedure":{"procedureName":"SimpleProceedureTest",
                       "parameters":[
-                            {"actualParameterName":"arg1","value":"${params.envtarget}"}
+                            {"actualParameterName":"appName","value":"${params.appName}"},
+                            {"actualParameterName":"appName","value":"${params.compName}"},
+                            {"actualParameterName":"appName","value":"${params.compVersion}"},
+                            {"actualParameterName":"appName","value":"${params.envName}"}
                       ]}}"""
                 ])
             }
