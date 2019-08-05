@@ -19,9 +19,9 @@ pipeline{
                       configuration: 'flow',
                       projectName : 'default',
                       procedureName : 'Echo',
-                      procedureParameters : """{"procedure":{"procedureName":"Echo","parameters":[{"actualParameterName":"arg1","value":"${params.envtarget}"}]}}"""
-                ])
+                  ])
             }
         }
         
     }
+}
