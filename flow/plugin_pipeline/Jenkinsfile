@@ -28,7 +28,7 @@ pipeline{
         stage('get-status'){
             steps{
                step([$class: 'ElectricFlowGenericRestApi',
-                    configuration: 'CBFConfiguration',
+                    configuration: 'flow',
                     urlPath : '/jobs',
                     httpMethod : 'GET',
                     body : '',
