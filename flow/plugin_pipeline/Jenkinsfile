@@ -23,11 +23,12 @@ pipeline{
                 ])
             }
         }
-        stage('get-status'){
-            steps{
-                sh "curl -u sbrown:sbrown  https://ps9.ecloud-kdemo.com/rest/v1.0/jobs/7f30941b-b74f-11e9-a8ba-02425352dfc1 |/data/jq '.job.status'"
-            }        
-        }
+        //stage('get-status'){
+        //    steps{
+        //        sh "curl -u sbrown:sbrown  https://ps9.ecloud-kdemo.com/rest/v1.0/jobs/7f30941b-b74f-11e9-a8ba-02425352dfc1 
+         //       //|/data/jq '.job.status'"
+          //  }        
+        //}
         
     }
 }
