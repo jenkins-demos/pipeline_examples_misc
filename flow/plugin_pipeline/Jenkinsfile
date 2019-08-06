@@ -35,7 +35,7 @@ pipeline{
                     parameters : [
                             [$class: 'Pair',
                              key: 'jobId',
-                             value: '2528aa84-b84f-11e9-8e99-02425352dfc1'
+                             value: "2528aa84-b84f-11e9-8e99-02425352dfc1"
                             ]
                           ]
                         ]
