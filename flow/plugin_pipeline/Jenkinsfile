@@ -16,12 +16,12 @@ pipeline{
             
             steps{
                step(
-                   [$class: 'ElectricFlowRunProcedure',
+                   ([$class: 'ElectricFlowRunProcedure',
                       configuration: 'flow',
                       projectName : 'Training_sbrown',
                       procedureName : 'SimpleProceedureTest',
                       procedureParameters : """{"procedure":{"procedureName":"SimpleProceedureTest","parameters":[{"actualParameterName":"arg1","value":"${params.envtarget}"}]}}"""
-                ]
+                ])
                 )
             }
         }
