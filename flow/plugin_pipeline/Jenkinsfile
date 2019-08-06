@@ -16,12 +16,14 @@ pipeline{
             
             steps{
                step(
-                   def stu=([$class: 'ElectricFlowRunProcedure',
+                   shell(
+                       ([$class: 'ElectricFlowRunProcedure',
                       configuration: 'flow',
                       projectName : 'Training_sbrown',
                       procedureName : 'SimpleProceedureTest',
                       procedureParameters : """{"procedure":{"procedureName":"SimpleProceedureTest","parameters":[{"actualParameterName":"arg1","value":"${params.envtarget}"}]}}"""
                 ])
+                )
                 )
             }
         }
