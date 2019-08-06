@@ -16,7 +16,7 @@ pipeline{
             
             steps{
                step(
-                   ([$class: 'ElectricFlowRunProcedure',
+                   def stu=([$class: 'ElectricFlowRunProcedure',
                       configuration: 'flow',
                       projectName : 'Training_sbrown',
                       procedureName : 'SimpleProceedureTest',
