@@ -15,12 +15,14 @@ pipeline{
             
             
             steps{
-               stu=step([$class: 'ElectricFlowRunProcedure',
+               step(
+                   def stu=[$class: 'ElectricFlowRunProcedure',
                       configuration: 'flow',
                       projectName : 'Training_sbrown',
                       procedureName : 'SimpleProceedureTest',
                       procedureParameters : """{"procedure":{"procedureName":"SimpleProceedureTest","parameters":[{"actualParameterName":"arg1","value":"${params.envtarget}"}]}}"""
-                ])
+                ]
+                )
             }
         }
         //stage('get-status'){
