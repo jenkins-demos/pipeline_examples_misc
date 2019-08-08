@@ -41,9 +41,7 @@ pipeline{
                         ]
                      )     
               }
-            step(
-                sh 'env'
-            )
+            
          }
     }
 }
