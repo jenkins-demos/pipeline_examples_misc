@@ -35,7 +35,8 @@ spec:
           //sh  'curl -s -u $vPassword:$vUser --insecure -X GET "https://ps9.ecloud-kdemo.com/rest/v1.0/jobs/283e07fa-598f-11e9-b750-02422b598c05" -H "accept: application/json" |jq .job.combinedStatus.status  '       
           //sh 'https://ps9.ecloud-kdemo.com/rest/v1.0/jobs?request=runProcedure&projectName=default&procedureName=echo
           //sh 'curl  -v -u $vPassword:$vUser --insecure -X POST "https://ps9.ecloud-kdemo.com/rest/v1.0/jobs?request=runProcedure&projectName=default&procedureName=echo" -H "accept: application/json" -d "{\"actualParameter\":[{\"actualParameterName\":\"arg1\",\"value\":\"123\"}]}"  ' 
-          sh 'curl -vvv -u $vPassword:$vUser --insecure -X POST "https://ps9.ecloud-kdemo.com/rest/v1.0/jobs?request=runProcedure&projectName=default&procedureName=echo" -H "accept: application/json" -d "{"actualParameter":[{"actualParameterName":"arg1","value":"123"}]}"'
+          curl -vvv -u sbrown:sbrown --insecure -X POST "https://ps9.ecloud-kdemo.com/rest/v1.0/jobs?request=runProcedure&projectName=Default&procedureName=Echo" -H "accept: application/json" -d "{\"actualParameter\":[{\"actualParameterName\":\"arg1\",\"value\":\"stu123\"}]}" //sh 'curl -vvv -u $vPassword:$vUser --insecure -X POST "https://ps9.ecloud-kdemo.com/rest/v1.0/jobs?request=runProcedure&projectName=default&procedureName=echo" -H "accept: application/json" -d "{"actualParameter":[{"actualParameterName":"arg1","value":"123"}]}"'
+         
         }   
       }
     }
